@@ -1,0 +1,63 @@
+@import "tailwindcss";
+
+@theme {
+  --color-canvas: #0a0b0e;
+  --color-surface-1: #111318;
+  --color-surface-2: #16181e;
+  --color-hairline: #23262e;
+  --color-ink: #f2f4f7;
+  --color-ink-muted: #a7aebb;
+  --color-ink-faint: #6b7280;
+  --color-brand: #2fd39a;
+  --color-brand-deep: #0e9f6e;
+  --color-held: #f5a524;
+  --color-danger: #f0524f;
+  --color-info: #5e8bff;
+
+  --font-display: "Bricolage Grotesque", "Avenir Next", system-ui, sans-serif;
+  --font-sans: system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--color-canvas);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+.money {
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: "tnum";
+}
+
+::selection {
+  background: rgba(47, 211, 154, 0.28);
+}
+
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.rise {
+  animation: rise 0.28s ease-out both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .rise {
+    animation: none;
+  }
+  html {
+    scroll-behavior: auto;
+  }
+}

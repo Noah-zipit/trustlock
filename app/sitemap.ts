@@ -1,0 +1,12 @@
+import type { MetadataRoute } from "next";
+
+export default function sitemap(): MetadataRoute.Sitemap {
+  const base = "https://trustlock.dev";
+  return [
+    { url: `${base}/`, lastModified: new Date() },
+    { url: `${base}/dashboard`, lastModified: new Date() },
+    { url: `${base}/disputes`, lastModified: new Date() },
+    { url: `${base}/terms`, lastModified: new Date() },
+    { url: `${base}/privacy`, lastModified: new Date() },
+  ];
+}

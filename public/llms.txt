@@ -1,0 +1,19 @@
+# TrustLock
+
+AI escrow for freelancers. The client funds a milestone (PayPal authorize, funds
+held), the freelancer submits deliverables, an AI verifier checks the work
+against the brief, and the payment releases automatically on approval. Disputes
+freeze the escrow for human review.
+
+PayPal AI Hackathon 2026 entry. Demo runs on mock payments.
+
+Key routes:
+- / — marketing landing page
+- /dashboard — milestone list and creation
+- /escrow/[id] — the escrow flow: fund, submit, verify, release, dispute
+- /disputes — human review queue
+
+Core modules:
+- lib/paypal/paypal-client.ts — PayPal interface + mock (sandbox mapping documented)
+- lib/verifier/verifier.ts — AI verifier interface + mock (LLM slot documented)
+- lib/db/db.ts — JSON prototype store
