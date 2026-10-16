@@ -22,5 +22,13 @@
     "eslint-config-next": "16.4.0",
     "tailwindcss": "^4",
     "typescript": "^5"
-  }
+  },
+  "description": "TrustLock \u2014 AI escrow for freelancers. PayPal AI Hackathon 2026 entry.",
+  "author": "Ashar Qaisar",
+  "keywords": [
+    "escrow",
+    "freelance",
+    "ai",
+    "nextjs"
+  ]
 }
