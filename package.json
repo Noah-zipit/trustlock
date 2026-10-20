@@ -30,5 +30,10 @@
     "freelance",
     "ai",
     "nextjs"
-  ]
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Noah-zipit/trustlock.git"
+  }
 }
